@@ -3,5 +3,64 @@
 *::after {
     margin: 0px;
     padding: 0px;
-    /* list-style-type: none; */
+    list-style-type: none;
+}
+
+body {
+    font-family: 'Opens Sans', sans-serif;
+    background-color: #EFEAD8;
+}
+
+header {
+    background-color: #6D8B74;
+    color: #dfdfdf;
+}
+
+.nav-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 5px;
+}
+
+#nav-logo {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-logo #logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+#nav-title {
+    flex-grow: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-items {
+    flex-grow: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#nav-items a:link, #nav-items a:visited {
+    text-decoration: none;
+    color: #dfdfdf;
+}
+
+#nav-items a:hover {
+    background-color: #5F7161;
+}
+
+footer p::after {
+    content: 'PabloskyDev';
 }
