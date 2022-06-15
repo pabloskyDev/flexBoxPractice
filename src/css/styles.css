@@ -1,0 +1,56 @@
+h1 {
+    text-align: center;
+}
+
+section {
+    width: 500px;
+    padding: 20px;
+    height: 500px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    display: flex; /*Propiedad para determinar que un contenedor pueda usar flexbox*/
+    flex-direction: row; /*Flexbox cuenta con dos ejes, por defecto row(horizontal) y column(vertical)*/
+    flex-wrap: wrap; /*Saltar a la siguiente linea cuando los item superan el ancho del contenedor*/
+    justify-content: space-around; /*Alinea los hijos en el eje principal(horizontal o vertical) */
+    align-items: flex-start; /*Alinea los elementos en el eje secundario*/
+
+}
+
+.caja1 {
+    background-color: #00ffff;
+    /* Flexgrow trabaja con el espacio disponible */
+    /* flex-grow: 2; */
+    /* Todo se puede resumir con la propiedad flex */
+    flex: 1 1 0px;
+    /* Order: Organiza de menor a mayor el posicionamiento los hijos(boxes) */
+    order: 1;
+}
+
+.caja2 {
+    background-color: #ff7f50;
+    /* Flex-shrink determina el nivel de reducción de los hijos */
+    /* flex-shrink: 1; */
+    /* Flex-basis determina el tamaño inicial de las cajas */
+    /* Flex-basis: 0; Si se coloca en todos los items hijos coloca los items con el mismo espaciado, independientemente de su contenido */
+    /* flex-basis: 200px; */
+    /* flex: flex-grow, flex-basis, flex-shrink */
+    flex: 1 1 0px;
+    order: 2;
+}
+
+.caja3 {
+    background-color: #228b22;
+    align-self: stretch; /*Alinea elementos hijos de forma individual en el eje secundario*/
+    /* Los hijos flexibles ignoran propiedades como float, clear y vertical-align */
+    /* Podemos modificar el tamaño de los hijos con flex-grow, flex-shrink, flex-basis */
+    /* Por defecto el tamaño de los hijos se define por el tamaño de su contenido */
+    /* flex-grow: 1; */
+    flex: 1 1 0px;
+    order: 0;
+}
+
+.caja4 {
+    background-color: #dc143c;
+    flex: 1 1 0px;
+    order: -1;
+}
